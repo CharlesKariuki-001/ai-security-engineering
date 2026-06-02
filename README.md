@@ -1,69 +1,70 @@
-# 🛡️ AI Security Engineering Master Lab
+# 🛡️ AI Pipeline Red Team Architect Lab
 
-Welcome to my personal engineering laboratory. This repository documents my raw, self-paced grind to master **AI Security Engineering** from scratch. 
+**My raw 12-month grind to become one of the rare engineers who can attack and defend real AI systems.**
 
-Instead of focusing on high-level theory, I am building low-level pipelines, executing adversarial attacks, and engineering defensive guardrails to secure production-grade machine learning infrastructure.
+I am a CS graduate from Kenya building this from scratch — Colab, Kaggle, Hugging Face free tier, local Docker, just daily code and discipline.
 
----
-
-## 🎯 My Ultimate Goal
-To build a highly specialized, world-class skill set at the intersection of **Offensive Security (AI Red Teaming)** and **Secure MLOps (AI Infrastructure Defense)** to secure enterprise-grade AI platforms globally.
+This repo is my war journal: low-level attacks on AI pipelines, production defenses, and real systems I ship along the way. It proves I can find weaknesses in enterprise AI and fix them before bad actors do.
 
 ---
 
-## 🛣️ The Engineering Curriculum & Progress
+## 🎯 Why This Matters
+AI is now the core of companies — powering agents, search, decisions. But most pipelines are fragile. One clever attack can leak data, steal models, or break everything.
+---
 
-### 🧱 Block 1: Foundations & The Math (Months 1–3)
-*Goal: Master production-ready Python, environment isolation, and classic machine learning pipelines.*
-- [ ] **Python for Security Engineers:** Advanced OOP, decorators, and asynchronous programming.
-- [ ] **Environment Hardening:** Containerization using Docker to sandbox malicious code execution.
-- [ ] **Classical ML Foundations:** Building predictors and classifiers using NumPy, Pandas, and Scikit-Learn.
-- [ ] 🚀 **Milestone Project 1:** *Raw Linear Classifier API with Custom Gradient Descent & FastAPI.*
+## 🛣️ The 12-Month Grind Roadmap
 
-### ⚡ Block 2: Deep Learning & RAG Architecture (Months 4–6)
-*Goal: Understand how data transforms into multi-dimensional vectors and construct modern enterprise AI systems.*
-- [ ] **Neural Network Internals:** Multi-layer Perceptrons, loss functions, and backpropagation using PyTorch.
-- [ ] **Transformer Deep Dive:** Tokenization, embedding vector spaces, and self-attention mechanisms.
-- [ ] **Data Pipeline Engineering:** Implementing Retrieval-Augmented Generation (RAG) using LangChain and ChromaDB/Pinecone.
-- [ ] 🚀 **Milestone Project 2:** *Production Enterprise RAG Engine with isolated local vector indexes.*
+### 🧱 Block 1: Foundations – Tensor Attacks & Low-Level AI (Months 1–3)
+**Goal:** Master the math and code under the hood — tensors, gradients, serialization — so I can manipulate models at the deepest level.
 
-### 💥 Block 3: Offensive AI Security / AI Red Teaming (Months 7–9)
-*Goal: Exploit machine learning models, hijack prompt pipelines, and compromise host infrastructure.*
-- [ ] **Adversarial Machine Learning:** Executing Evasion Attacks (FGSM) and Data Poisoning techniques.
-- [ ] **LLM Vulnerabilities:** Direct/Indirect Prompt Injections, Data Exfiltration, and Model Inversion (OWASP Top 10 for LLMs).
-- [ ] **Supply Chain & Infrastructure Exploitation:** Crafting Remote Code Execution (RCE) payloads inside unvetted model weights.
-- [ ] 🚀 **Milestone Project 3:** *Automated Prompt Injection Lab executing indirect multi-stage data exfiltration.*
+- [ ] Linear algebra, embeddings, attention mechanisms, autograd
+- [ ] PyTorch tensor operations, adversarial gradients (FGSM/PGD)
+- [ ] Safe model saving (Safetensors) vs dangerous formats
+- [ ] Environment setup with Docker + free Colab/Kaggle GPUs
 
-### 🛡️ Block 4: Defensive AI Architecture & SecOps (Months 10–12)
-*Goal: Deploy active runtime security layers, sanitize model data, and enforce system governance.*
-- [ ] **Runtime Interception:** Engineering validation and alignment walls using Llama Guard or NeMo Guardrails.
-- [ ] **Supply Chain Defense:** Building automated scanners to verify and safely deserialize open-source tensor weights.
-- [ ] **Threat Mapping:** Structuring real-world logging and indicator-of-compromise (IoC) signals against the **MITRE ATLAS Framework**.
-- [ ] 🚀 **Milestone Project 4:** *The Secure AI Gateway — An intelligent reverse proxy sanitizing user input and tracking threat models.*
+**🚀 Milestone Project 1: AdversarialForge**  
+A full training-to-inference pipeline (fine-tuned small model). I inject poisoning, run attacks, export safely, and serve with vLLM. Shows I control the entire attack surface from data to runtime. (Built and tested on free tiers only.)
+
+### ⚡ Block 2: Offensive Red Teaming & Pipeline Exploitation (Months 4–6)
+**Goal:** Learn to break live AI systems like real attackers do.
+
+- [ ] Prompt injections, agent hijacking, multi-turn jailbreaks
+- [ ] Model extraction and data leakage attacks
+- [ ] Supply-chain poisoning and tool-use exploits
+- [ ] Tools: PyRIT, Garak, LangChain agents
+
+**🚀 Milestone Project 2: PipelineKiller**  
+A realistic enterprise RAG/agent system that I deliberately attack with automated scripts. Dashboard shows success rates of data exfiltration and hijacks. Proves I can find dangerous holes fast.
+
+### 🛡️ Block 3: Defensive Hardening & Runtime Protection (Months 7–9)
+**Goal:** Build guards that actually survive attacks.
+
+- [ ] Adversarial training and runtime detection (perplexity, embedding drift)
+- [ ] Input/output guards, model signing, provenance
+- [ ] Monitoring with Prometheus + anomaly detection
+- [ ] Tools: Llama Guard, NeMo Guardrails, vLLM middleware
+
+**🚀 Milestone Project 3: IronPipeline**  
+Take the vulnerable system from Block 2 and harden it completely. Add layered defenses, auto-quarantine on attacks, and observability. Side-by-side comparison shows attacks stopped.
+
+### 🔥 Block 4: Full Autonomous Red/Blue Platform (Months 10–12)
+**Goal:** Tie everything together into a production-ready system companies would pay for.
+
+- [ ] Continuous automated red teaming + defense loops
+- [ ] GitOps deployment, threat reporting, compliance
+- [ ] Full observability and zero-trust architecture
+
+**🚀 Milestone Project 4: ForgeDefender**  
+An end-to-end platform that attacks its own models, generates fixes, retrains, and deploys safely. Includes metrics, diagrams, and live demo scripts. This is my flagship project that screams "hire me."
 
 ---
 
-## 📂 Repository Blueprints
-
+## 📂 Repository Structure
 ```text
-├── 📓 notes/           # Deep-dive theoretical breakdowns and cheat sheets
-├── 🔬 labs/            # Code proofs-of-concept, quick attack vectors, and notebook drafts
-└── 🚀 projects/        # End-to-end production-grade milestone builds
-```
-
----
-
-## 🛠️ The Core Technical Stack
-* **Core Language:** Python
-* **ML Ecosystem:** PyTorch, Hugging Face Transformers, Scikit-Learn
-* **Pipeline Orchestration:** LangChain, FastAPI, Docker
-* **Security Frameworks:** MITRE ATLAS Matrix, OWASP LLM Top 10
-
----
-
-## 📈 Connect With Me
-* **LinkedIn:** [Your Name or Link Here]
-* **Location:** Kenya 🇰🇪 (Open to Global Remote Opportunities)
-
----
-> *“Every day a small script, every week a deeper understanding.”*
+├── Block1-AdversarialForge/     # Tensor attacks & foundations
+├── Block2-PipelineKiller/       # Offensive exploitation
+├── Block3-IronPipeline/         # Defensive hardening
+├── Block4-ForgeDefender/        # Full autonomous platform
+├── docs/                        # Architecture diagrams (Mermaid), attack reports, metrics
+├── notes/                       # Simple cheat sheets and lessons learned
+└── scripts/                     # Reproducible setup for free-tier execution
